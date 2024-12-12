@@ -30,7 +30,7 @@ WHERE { ?subject foaf:name ?name }
 
 On pourrait rajouter un `DISTINCT` dans le `SELECT` pour éviter les doublons.
 
-Résultat :
+Résultats :
 
 ![](images/requete1.png)
 [...]
@@ -47,9 +47,12 @@ WHERE {
 }
 ```
 
-Résultat :
+Résultats :
 
-![](images/requete2.png)
+| subject        | name     |
+|----------------|----------|
+| Jérémy Stinat  | "Jérémy" |
+| Bénoît Bastien | "Bénoît" |
 
 3. **Requête 3** :
 
@@ -64,9 +67,12 @@ WHERE {
 }
 ```
 
-Résultat :
+Résultats :
 
-![](images/requete3.png)
+| match     | name       |
+|-----------|------------|
+| Match 1.2 | "Clermont" |
+| Match 1.1 | "Lyon"     |
 
 4. **Requête 4** :
 
@@ -81,9 +87,12 @@ WHERE {
 }
 ```
 
-Résultat :
+Résultats :
 
-![](images/requete4.png)
+| match      | name         |
+|------------|--------------|
+| Match 16.2 | "Lens"       |
+| Match 16.1 | "Strasbourg" |
 
 5. **Requête 5** :
 
@@ -102,9 +111,12 @@ WHERE {
 GROUP BY ?teamName
 ```
 
-Résultat :
+Résultats :
 
-![](images/requete5.png)
+| teamName   | buts |
+|------------|----|
+| "Clermont" | "0"^^<http://www.w3.org/2001/XMLSchema#integer>   |
+| "Lyon"     | "2"^^<http://www.w3.org/2001/XMLSchema#integer>   |
 
 ### Partie 2
 
